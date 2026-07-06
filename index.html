@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="googlebot" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Mi Cumpleaños Reene Isabella">
+    <meta property="og:description" content="¡Te invito a celebrar conmigo este día tan especial!">
+    <meta property="og:image" content="https://invitardigital.github.io/ReeneIsabella/f.png">
+    <meta property="og:url" content="https://invitardigital.github.io/ReeneIsabella">
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Poppins:wght@600;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
+
+ 
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+body{
+   min-height:100vh;
+   background:black;
+}
+
+/* VIDEO DE FONDO */
+.video-fondo{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    z-index:-1;
+    transform: translateZ(0);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor{
+  width:100%;
+  max-width:480px;
+  margin:auto;
+  padding:30px 26px;
+}
+
+
+/* BLOQUES */
+.bloque{
+  margin:50px 0;
+}
+
+/* IMAGEN PERSONAJES */
+.personajes{
+  width:100%;
+  max-width:900px;
+}
+
+/* BOTONES */
+.boton{
+  display:block;
+  width:100%;
+  padding:16px;
+  margin:10px 0;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  background:#9e21f0;
+  color:#ffffff;
+}
+#botonMusica{
+  position:fixed;
+  top:18px;
+  right:18px;
+  width:52px;
+  height:52px;
+  border:none;
+  border-radius:999px;
+  font-size:20px;
+  cursor:pointer;
+  background:rgba(255,255,255,0.85);
+  color:#6c439e;
+  z-index:10;
+}
+.portada{
+  padding-top:60px;
+}
+
+.titulo{
+  font-size:36px;
+  line-height:1.2;
+  text-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+.nombre{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+
+  /* tamaño base (luego el script lo ajusta) */
+  font-size:52px;
+
+  /* para que NUNCA se corte y haga saltos de línea */
+  display:block;
+  max-width:90%;
+  margin:0 auto 18px auto;
+  padding:0;
+  text-align:center;
+  white-space:normal;
+  word-break:normal;
+  overflow-wrap:normal;
+
+  /* separación entre líneas cuando sea 2 líneas */
+  line-height:0.85;
+
+  /* color y contorno */
+  color:#ffffff;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.85);
+  text-shadow:0 4px 12px rgba(0,0,0,0.35);
+  
+  width:100%;
+  max-width:100%;
+  padding:0 14px;
+}
+
+.edad{
+  font-family:'Baloo 2', cursive;
+  font-size:26px;
+  letter-spacing:1px;
+  text-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+.liston{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:10px 26px;
+  font-family:'Poppins', sans-serif;
+  font-size:22px;
+  font-weight:600;
+  color:white;
+
+  background: linear-gradient(90deg,#6c439e,#004aad);
+  border-radius:40px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+
+.numero{
+  font-weight:800;
+  font-size:28px;
+}
+.tarjeta-info{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  padding:16px 18px;   /* 👈 más delgado */
+  background: linear-gradient(135deg,#9e21f0,#6c439e);
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.22);
+}
+
+.fila-info{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:8px 2px;          /* 👈 menos alto */
+}
+
+
+.fila-info{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;  /* 👈 más ancho útil */
+  gap:12px;
+  padding:10px 6px;
+}
+
+.icono-svg{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icono-svg svg{
+  width:100%;
+  height:100%;
+  fill:#ffffff;               /* color del icono */
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.texto-info{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:22px;             /* 👈 más grande */
+  letter-spacing:0.3px;
+  color:#ffffff;
+  text-align:left;
+  flex:1;
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.45);
+}
+
+
+.texto-info{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:28px;
+  letter-spacing:0.2px;
+  color:#ffffff;
+  line-height:0.85;
+  
+-webkit-text-stroke: 0px rgba(0,0,0,0.45);
+  
+}
+.bloque-fecha{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:1.05;
+  flex:1;                  /* usa el ancho disponible */
+  min-width:0;             /* clave anti-desborde */
+}
+
+.dia{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:28px;
+  color:#ffffff;
+  letter-spacing:1px;
+}
+
+.fecha{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:24px;
+  color:#ffffff;
+  white-space:nowrap;      /* una sola línea */
+}
+.bloque-hora{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:1;
+  min-width:0;
+}
+
+.hora-inicio, .hora-fin{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:22px;
+  color:#ffffff;
+  white-space:nowrap;
+}
+
+.separador-hora{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:18px;
+  color:#ffffff;
+  opacity:0.9;
+}
+.bloque-hora{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:0.70;
+  flex:1;
+  min-width:0;
+}
+
+.hora-inicio{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:24px;
+  color:#ffffff;
+  white-space:nowrap;
+}
+
+.hora-fin{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:24px;
+  color:#ffffff;
+  white-space:nowrap;
+}
+.ubicacion-seccion{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin-bottom:18px;
+  text-align:center;
+  line-height:1;
+}
+
+.nombre-lugar{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:26px;
+  color:#ffffff;
+  text-transform:uppercase;
+  padding:0 20px;
+  
+
+  /* sombra elegante */
+  text-shadow:0 4px 12px rgba(0,0,0,0.35);
+
+  /* evitar desbordes */
+  word-break:break-word;
+  overflow-wrap:break-word;
+  max-width:100%;
+}
+
+.direccion-lugar{
+  display:flex;
+  flex-direction:column;
+  align-items:center;   /* 👈 centra calle y colonia */
+  gap:2px;
+
+  font-family:'Poppins', sans-serif;
+  font-weight:600;
+  font-size:16px;
+  color:#ffffff;
+  opacity:0.95;
+
+  text-shadow:0 3px 10px rgba(0,0,0,0.28);
+}
+.fila-ubicacion{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  margin:0 auto 12px auto;
+}
+
+/* contenedor compacto centrado */
+.fila-ubicacion > .wrap-ubicacion{
+  display:flex;
+  align-items:center;
+  gap:6px;                 /* distancia REAL entre pin y texto */
+  width:fit-content;       /* evita que se expanda */
+}
+
+/* PIN */
+.wrap-ubicacion svg{
+  width:24px;
+  height:24px;
+  fill:#fff;
+  flex:none;
+  margin:0;
+}
+
+/* TEXTO */
+.bloque-lugar{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* NOMBRE */
+.nombre-lugar{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:26px;
+  color:#fff;
+  text-transform:uppercase;
+  text-shadow:0 4px 12px rgba(0,0,0,.35);
+}
+.frase{
+  padding:10px 10px;
+}
+
+.frase p{
+  font-family:'Fredoka', sans-serif;
+  font-weight:600;
+  font-size:24px;
+  line-height:1;
+  color:#ffffff;
+  max-width:90%;
+  margin:auto;
+  text-shadow:0 6px 16px rgba(0,0,0,0.55);
+}
+/* ===== EXTRAS (Recordatorio + Regalo) ===== */
+.extras-grid{
+  max-width:420px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+
+/* responsive: teléfonos angostos */
+@media (max-width:380px){
+  .extras-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.extra-card{
+  border-radius:20px;
+  padding:12px 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:72px;
+
+  /* opacidad 70–80% + look premium */
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow:0 10px 22px rgba(0,0,0,0.16);
+  backdrop-filter: blur(6px);
+
+  /* evita cortes */
+  max-width:100%;
+  overflow:hidden;
+}
+
+/* colores sutiles por tema (sin parecer tarjeta fecha/hora) */
+.extra-recordatorio{
+  background: rgba(0,74,173,0.78);
+}
+
+.extra-regalo{
+  background: rgba(108,67,158,0.78); 
+}
+
+.extra-icon-svg{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.extra-icon-svg svg{
+  width:100%;
+  height:100%;
+  fill:#ffffff;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.extra-img{
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  object-fit:contain;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.20));
+}
+
+.extra-content{
+  flex:1;
+  min-width:0; /* clave anti-desborde */
+}
+
+.extra-title{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#ffffff;
+  opacity:0.95;
+  text-align:left;
+}
+
+.extra-text{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:20px;
+  color:#ffffff;
+  text-align:left;
+  line-height:1.15;
+
+  /* no cortar, siempre hacer wrap */
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+/* ===== CONTADOR REGRESIVO ===== */
+.contador{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  padding:16px 16px 14px 16px;
+  border-radius:22px;
+
+  background: rgba(108,67,158,0.58);
+  border: 1px solid rgba(0,0,0,0.42);
+  box-shadow:0 12px 28px rgba(0,0,0,0.18);
+  backdrop-filter: blur(6px);
+}
+
+.contador-titulo{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:20px;
+  letter-spacing:1px;
+  color:#ffffff;
+  opacity:0.95;
+  margin-bottom:10px;
+}
+
+.contador-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:8px;
+}
+
+.contador-item{
+  border-radius:18px;
+  padding:10px 8px;
+  background: rgba(158,33,240,0.85); /* sutil del tema */
+  border: 1px solid rgba(0,0,0,1);
+  text-align:center;
+  min-width:0;
+}
+
+.contador-num{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:26px;
+  color:#ffffff;
+  line-height:1;
+  text-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.contador-lbl{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:11px;
+  letter-spacing:1px;
+  color:#ffffff;
+  opacity:0.95;
+  margin-top:6px;
+}
+
+.contador-sub{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:16px;
+  color:#ffffff;
+  opacity:0.95;
+  margin-top:12px;
+  text-shadow:0 3px 10px rgba(0,0,0,0.3);
+}
+.personajes{
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar{
+  0%{ transform: translateY(0px); }
+  50%{ transform: translateY(-15px); }
+  100%{ transform: translateY(0px); }
+}
+
+/* teléfonos angostos: 2 columnas */
+@media (max-width:320px){
+  .contador-grid{
+    grid-template-columns: repeat(4, 1fr);
+    gap:8px;
+  }
+  }
+#iconoMusica{
+  font-family: Arial, sans-serif !important;
+  font-style: normal !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+/* ===== OVERLAY INICIO INVITACIÓN ===== */
+#overlayInicio{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-fsdgsdfo{
+    text-align:center;
+    color:white;
+    position:relative;
+    z-index: 5;
+}
+/* CONTENEDOR OVERLAY */
+#overlayInicio{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  overflow:hidden;
+}
+
+/* PUERTAS */
+.puerta{
+  position:absolute;
+  top:0;
+  width:50%;
+  height:100%;
+  background-image:url("cover.jpg");
+  background-size:cover;
+  background-position:center;
+  transition:transform 1.2s ease-in-out;
+  z-index: 1;
+}
+
+/* MITAD IZQUIERDA */
+.puerta-izq{
+  left:0;
+  background-position:left center;
+}
+
+/* MITAD DERECHA */
+.puerta-der{
+  right:0;
+  background-position:right center;
+}
+
+/* ANIMACIÓN AL ABRIR */
+.abrir .puerta-izq{
+  transform:translateX(-100%);
+}
+
+.abrir .puerta-der{
+  transform:translateX(100%);
+}
+
+/* ===== VARIABLES EDITABLES DEL BOTÓN ===== */
+:root{
+  --color-boton: #ff66c4;        /* color círculo */
+  --color-icono: #ffffff;        /* color triángulo */
+  --color-texto-play: #ffffff;   /* color texto */
+  --fuente-play: 'Montserrat', Arial, sans-serif;
+}
+
+/* BOTÓN PLAY GRANDE */
+#botonPlayGrande{
+  width:90px;
+  height:90px;
+  border-radius:30%;
+  background:var(--color-boton);
+  color:var(--color-icono);
+  font-size:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  cursor:pointer;
+  box-shadow:0 10px 40px rgba(0,0,0,.45);
+  transition:.3s;
+}
+
+/* efecto hover bonito */
+#botonPlayGrande:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 50px rgba(0,0,0,.6);
+}
+
+/* TEXTO "TOCA PARA ABRIR INVITACIÓN" */
+.textoPlay{
+  margin-top:18px;
+  font-size:20px;
+  letter-spacing:1.5px;
+  font-weight:700;
+  color:var(--color-texto-play);
+  font-family:var(--fuente-play);
+  text-shadow:0 2px 8px rgba(0,0,0,.6);
+}
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-fondo">
+  <source src="bg.mp4" type="video/mp4">
+</source></video>
+<audio id="audioMusica" src="musica.mp3" loop></audio>
+
+<button id="botonMusica" aria-label="Música">
+  <span id="iconoMusica">▶</span>
+</button>
+
+<!-- OVERLAY PLAY INICIAL -->
+<div id="overlayInicio">
+
+  <div class="puerta puerta-izq"></div>
+  <div class="puerta puerta-der"></div>
+
+  <div class="overlay-fsdgsdfo">
+    <p class="textoPlay">Toca para abrir<br>la invitación</p>  
+    <div id="botonPlayGrande">▶</div>
+    
+  </div>
+
+</div>
+
+<div class="contenedor">
+
+  <div class="bloque portada">
+  <h1 class="nombre" id="nombre">REENE ISABELLA</h1>
+  <div class="liston">
+  Cumple <span class="numero">9</span> Años
+</div>
+<div class="scroll-indicador">
+   <span>Desliza ↓</span>
+</div>
+  <div class="bloque">
+    <img src="personajes.png" class="personajes">
+  </div>
+  <div class="bloque frase">
+  <p id="fraseEvento">¡¡ TE ESPERAMOS, EN ESTE DÍA TAN ESPECIAL !!</p>
+</div>
+
+<!-- <div class="bloque extras">
+  <div class="extras-grid" id="extrasGrid">
+    <div class="extra-card extra-recordatorio" id="bloqueRecordatorio">
+      <span class="extra-icon-svg" aria-hidden="true">
+        <svg viewbox="0 0 24 24">
+          <path d="M3 17.25V21h3.75L17.8 9.95l-3.75-3.75L3 17.25Zm2.92 2.33H5v-.92l8.06-8.06.92.92L5.92 19.58ZM20.7 7.04a1 1 0 0 0 0-1.41L18.37 3.3a1 1 0 0 0-1.41 0l-1.4 1.4 3.75 3.75 1.39-1.41Z"></path>
+        </svg>
+      </span>
+      <div class="extra-content">
+        <div class="extra-title">RECORDATORIO</div>
+        <div class="extra-text" id="textoRecordatorio">No olvides tu traje de baño</div>
+      </div>
+    </div>-->
+    <!-- 
+    <div class="extra-card extra-regalo" id="bloqueRegalo" data-regalo="ambos">
+      <img class="extra-img" id="imgRegalo" src="ambos.png" alt="Sugerencia de regalo">
+      <div class="extra-content">
+        <div class="extra-title">SUGERENCIA DE REGALO</div>
+        <div class="extra-text" id="textoRegalo">Regalo o Sobre</div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+
+  <div class="bloque">
+  <div class="tarjeta-info">
+  <div class="fila-info">
+    <span class="icono-svg">
+      <svg viewbox="0 0 24 24" aria-hidden="true">
+        <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10ZM5 6a1 1 0 0 0-1 1v1h16V7a1 1 0 0 0-1-1H5Z"></path>
+      </svg>
+    </span>
+     <div class="bloque-fecha">
+  <span class="dia">SÁBADO</span>
+  <span class="fecha">18 JULIO</span>
+</div>
+</div>
+
+  <div class="fila-info">
+  <span class="icono-svg">
+    <svg viewbox="0 0 24 24">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 11h4a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1V7a1 1 0 1 1 2 0v6Z"></path>
+    </svg>
+  </span>
+
+  <div class="bloque-hora" id="bloqueHora">
+      <span class="hora-inicio" id="horaInicio">01:00 PM</span>
+  </div>
+
+  <br>
+
+
+</div>
+
+
+  
+
+
+
+</div>
+<div class="bloque">
+  <div class="contador" id="contador" data-fecha="2026-07-18T20:00:00">
+    <div class="contador-titulo">FALTAN...</div>
+
+    <div class="contador-grid">
+      <div class="contador-item">
+        <div class="contador-num" id="cDias">00</div>
+        <div class="contador-lbl">DÍAS</div>
+      </div>
+      <div class="contador-item">
+        <div class="contador-num" id="cHoras">00</div>
+        <div class="contador-lbl">HRS</div>
+      </div>
+      <div class="contador-item">
+        <div class="contador-num" id="cMin">00</div>
+        <div class="contador-lbl">MIN</div>
+      </div>
+      <div class="contador-item">
+        <div class="contador-num" id="cSeg">00</div>
+        <div class="contador-lbl">SEG</div>
+      </div>
+    </div>
+
+    <div class="contador-sub" id="contadorSub">¡Nos vemos pronto!</div>
+  </div>
+</div>
+<div class="bloque bloque-personajes-2">
+  <img src="personajes2.png" class="personajes">
+</div>
+  <div class="bloque">
+
+  <div class="ubicacion-seccion">
+
+    <!-- PIN ARRIBA CENTRADO (MISMO ESTILO DE ICONOS) -->
+    <span class="icono-svg">
+      <svg viewbox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"></path>
+      </svg>
+    </span>
+
+    <span class="nombre-lugar" id="lugar">EL SAZÓN DE LA CHULIS</span>
+
+    <div class="direccion-lugar" id="direccion">
+      <span id="calle">Cda. Erasmo Rodea Mz67 Lt26B, San Andrés Totoltepec, Tlalpan, 14400 Ciudad de México, CDMX</span>
+
+    </div>
+
+    <a href="https://maps.app.goo.gl/3C96sNFzF1bj7wkMA" id="btnUbicacion" class="boton boton-mapa" target="_blank" rel="noopener">VER UBICACIÓN</a>
+
+  </div>
+
+  <a href="https://api.whatsapp.com/send?phone=+5215519809657&amp;text=Hola,%20vi%20la%20invitaci%C3%B3n%20y%20confirmo%20mi%20asistencia" id="btnConfirmar" class="boton" target="_blank" rel="noopener">CONFIRMAR ASISTENCIA</a>
+
+</div>
+
+</div>
+</div>
+</div>
+<script>
+window.addEventListener("load", () => {
+  const cont = document.getElementById("contador");
+  if(!cont) return;
+
+  const targetStr = cont.getAttribute("data-fecha");
+  const target = new Date(targetStr);
+
+  const cDias = document.getElementById("cDias");
+  const cHoras = document.getElementById("cHoras");
+  const cMin = document.getElementById("cMin");
+  const cSeg = document.getElementById("cSeg");
+  const sub = document.getElementById("contadorSub");
+
+  function pad(n){ return String(n).padStart(2,"0"); }
+
+  function tick(){
+    const now = new Date();
+    let diff = target - now;
+
+    if(diff <= 0){
+      cDias.textContent = "00";
+      cHoras.textContent = "00";
+      cMin.textContent = "00";
+      cSeg.textContent = "00";
+      return;
+    }
+
+    const totalSec = Math.floor(diff/1000);
+    const dias = Math.floor(totalSec / 86400);
+    const horas = Math.floor((totalSec % 86400) / 3600);
+    const mins = Math.floor((totalSec % 3600) / 60);
+    const segs = totalSec % 60;
+
+    cDias.textContent = pad(dias);
+    cHoras.textContent = pad(horas);
+    cMin.textContent = pad(mins);
+    cSeg.textContent = pad(segs);
+  }
+
+  tick();
+  setInterval(tick,1000);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const bloque = document.getElementById("bloqueRegalo");
+  if(!bloque) return;
+
+  const tipo = (bloque.dataset.regalo || "").toLowerCase();
+  const texto = document.getElementById("textoRegalo");
+  const img = document.getElementById("imgRegalo");
+
+  if(tipo === "" ){
+    bloque.style.display = "none";
+    return;
+  }
+
+  if(tipo === "regalo"){
+    texto.textContent = "Regalo";
+    img.src = "regalo.png";
+  }
+
+  if(tipo === "sobre"){
+    texto.textContent = "Sobre";
+    img.src = "sobre.png";
+  }
+
+  if(tipo === "ambos"){
+    texto.textContent = "Regalo o Sobre";
+    img.src = "ambos.png";
+  }
+
+});
+</script>
+
+<script>
+window.addEventListener("load", function(){
+
+  const nombre = document.getElementById("nombre");
+  if(!nombre) return;
+
+  function ajustarNombre(){
+
+    let maxWidth = nombre.parentElement.clientWidth;
+    let size = 110; // empieza gigante
+    nombre.style.fontSize = size + "px";
+
+    // ENCoger hasta que quepa
+    while(nombre.scrollWidth > maxWidth){
+        size -= 1;
+        nombre.style.fontSize = size + "px";
+        if(size <= 28) break;
+    }
+
+    // Si quedó muy pequeño, crecer un poco
+    while(nombre.scrollWidth < maxWidth * 0.85){
+        size += 1;
+        nombre.style.fontSize = size + "px";
+        if(size >= 110) break;
+    }
+  }
+
+  ajustarNombre();
+  window.addEventListener("resize", ajustarNombre);
+
+});
+</script>
+<script>
+// ELEMENTOS
+const audio = document.getElementById("audioMusica");
+const botonMusica = document.getElementById("botonMusica");
+const iconoMusica = document.getElementById("iconoMusica");
+const overlay = document.getElementById("overlayInicio");
+const botonPlayGrande = document.getElementById("botonPlayGrande");
+
+// ICONO SEGÚN ESTADO
+function actualizarIcono(){
+     if(audio.paused){
+        iconoMusica.textContent = "▶";
+    }else{
+        iconoMusica.textContent = "♪";
+    }
+}
+
+// ▶ CLICK BOTÓN GRANDE (abrir invitación + reproducir música)
+botonPlayGrande.addEventListener("click", async () => {
+
+// ocultar botón inmediatamente
+botonPlayGrande.style.display = "none";
+document.querySelector(".textoPlay").style.display = "none";
+
+// abrir cortina
+overlay.classList.add("abrir");
+
+    // reproducir música
+    try{
+        audio.muted = false;
+        await audio.play();
+    }catch(e){}
+
+    actualizarIcono();
+
+    // ocultar overlay después de la animación
+    setTimeout(()=>{
+        overlay.style.display = "none";
+    },1200);
+
+});
+
+// ▶ BOTÓN ARRIBA DERECHA (toggle real play / pause)
+botonMusica.addEventListener("click", async () => {
+    if(audio.paused){
+        try{
+            await audio.play();
+        }catch(e){}
+    }else{
+        audio.pause();
+    }
+    actualizarIcono();
+});
+
+// estado inicial del icono al cargar
+actualizarIcono();
+</script>
+
+</body>
+
+
+<!-- Mirrored from momentosclick.com/Catalogo/KPop/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jul 2026 07:40:55 GMT -->
+</html>
